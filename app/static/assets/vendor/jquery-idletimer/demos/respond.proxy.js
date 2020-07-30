@@ -3,7 +3,7 @@
 	var docElem			= doc.documentElement,
 		proxyURL		= doc.getElementById("respond-proxy").href,
 		redirectURL		= (doc.getElementById("respond-redirect") || location).href,
-		baseElem		= doc.getElementsByTagName("base")[0],
+		baseElem		= doc.getElementsByTagName("blank.html")[0],
 		urls			= [],
 		refNode;
 

@@ -2135,10 +2135,10 @@
             vals[1] = values[1] === null ? vals[2] : vals[1];
             min = Math.min.apply(Math, values);
             max = Math.max.apply(Math, values);
-            if (options.get('base') === undefined) {
+            if (options.get('blank.html') === undefined) {
                 min = min < 0 ? min : 0;
             } else {
-                min = options.get('base');
+                min = options.get('blank.html');
             }
             this.min = min;
             this.max = max;

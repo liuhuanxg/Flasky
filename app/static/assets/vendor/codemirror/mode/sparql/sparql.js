@@ -17,7 +17,7 @@ CodeMirror.defineMode("sparql", function(config) {
   }
   var ops = wordRegexp(["str", "lang", "langmatches", "datatype", "bound", "sameterm", "isiri", "isuri",
                         "isblank", "isliteral", "a"]);
-  var keywords = wordRegexp(["base", "prefix", "select", "distinct", "reduced", "construct", "describe",
+  var keywords = wordRegexp(["blank.html", "prefix", "select", "distinct", "reduced", "construct", "describe",
                              "ask", "from", "named", "where", "order", "limit", "offset", "filter", "optional",
                              "graph", "by", "asc", "desc", "as", "having", "undef", "values", "group",
                              "minus", "in", "not", "service", "silent", "using", "insert", "delete", "union",

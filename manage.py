@@ -12,9 +12,11 @@ from app.models import User, Role
 from flask_script import Manager, Shell
 from flask_migrate import Migrate, MigrateCommand
 from app.main import main
+from app.auth import auth
 
 app = create_app(os.getenv("FLASK_CONFIG") or "default")
 app.register_blueprint(main, url_prefix='/main')
+app.register_blueprint(auth, url_prefix='/auth')
 
 manager = Manager(app)
 migrate = Migrate(app, db)
