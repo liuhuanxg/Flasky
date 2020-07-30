@@ -1,2 +1,4 @@
 .idea
-__pycahce__
+__pycache__
+migrations
+*.sqlite
