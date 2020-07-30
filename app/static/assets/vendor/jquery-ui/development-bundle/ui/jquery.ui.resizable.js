@@ -332,7 +332,7 @@ $.widget("ui.resizable", $.ui.mouse, {
 		// Calculate the attrs that will be change
 		data = trigger.apply(this, [event, dx, dy]);
 
-		// Put this in the mouseDrag handler since the user can start pressing shift while resizing
+		// Put this in the mouseDrag handler since the auth can start pressing shift while resizing
 		this._updateVirtualBoundaries(event.shiftKey);
 		if (this._aspectRatio || event.shiftKey) {
 			data = this._updateRatio(data, event);
@@ -363,7 +363,7 @@ $.widget("ui.resizable", $.ui.mouse, {
 			this._proportionallyResize();
 		}
 
-		// Call the user callback if the element was resized
+		// Call the auth callback if the element was resized
 		if ( ! $.isEmptyObject(props) ) {
 			this._trigger("resize", event, this.ui());
 		}

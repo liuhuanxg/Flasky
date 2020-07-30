@@ -14,6 +14,9 @@ from .forms import NameForm
 from .. import db
 from ..models import User
 
+@main.route("/base")
+def base():
+    return render_template("base/base.html")
 
 @main.route("/", methods=["GET", "POST"])
 def index():

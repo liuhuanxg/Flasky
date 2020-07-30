@@ -40,7 +40,7 @@
 
     /**
       a setting to prevent the rest of the page being
-      scrolled when user scrolls the `.content` element.
+      scrolled when auth scrolls the `.content` element.
       @property preventPageScrolling
       @type Boolean
       @default false
@@ -355,7 +355,7 @@
 
     /**
       Prevents the rest of the page being scrolled
-      when user scrolls the `.nano-content` element.
+      when auth scrolls the `.nano-content` element.
       @method preventScrolling
       @param event {Event}
       @param direction {String} Scroll direction (up or down)
@@ -857,7 +857,7 @@
 
     /**
       To flash the scrollbar gadget for an amount of time defined in plugin settings (defaults to 1,5s).
-      Useful if you want to show the user (e.g. on pageload) that there is more content waiting for him.
+      Useful if you want to show the auth (e.g. on pageload) that there is more content waiting for him.
       @method flash
       @chainable
       @example

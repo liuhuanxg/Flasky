@@ -8,9 +8,9 @@ $.idleTimer = function( firstParam, elem, opts ) {
 	// defaults that are to be stored as instance props on the elem
 	opts = $.extend( {
 		startImmediately: true,   //starts a timeout as soon as the timer is set up
-		idle: false,              //indicates if the user is idle
+		idle: false,              //indicates if the auth is idle
 		enabled: true,            //indicates if the idle timer is enabled
-		timeout: 30000,           //the amount of time (ms) before the user is considered idle
+		timeout: 30000,           //the amount of time (ms) before the auth is considered idle
 		events: "mousemove keydown DOMMouseScroll mousewheel mousedown touchstart touchmove" // activity is one of these events
 	}, opts );
 
@@ -90,7 +90,7 @@ $.idleTimer = function( firstParam, elem, opts ) {
 
 
 	/* (intentionally not documented)
-	 * Handles a user event indicating that the user isn't idle.
+	 * Handles a auth event indicating that the auth isn't idle.
 	 * @param {Event} event A DOM2-normalized event object.
 	 * @return {void}
 	 */
@@ -102,7 +102,7 @@ $.idleTimer = function( firstParam, elem, opts ) {
 
 		//if the idle timer is enabled
 		if ( obj.enabled ){
-			//if it's idle, that means the user is no longer idle
+			//if it's idle, that means the auth is no longer idle
 			if ( obj.idle ){
 				toggleIdleState( this );
 			}
@@ -121,7 +121,7 @@ $.idleTimer = function( firstParam, elem, opts ) {
 		obj.tId = setTimeout( toggleIdleState, obj.timeout );
 	}
 
-	// assume the user is active for the first x seconds.
+	// assume the auth is active for the first x seconds.
 	jqElem.data( "idleTimer", "active" );
 
 	// store our instance on the object

@@ -191,7 +191,7 @@ CodeMirror.defineMode("clojure", function (options) {
                             stream.eatSpace();
                             if (stream.eol() || stream.peek() == ";") {
                                 // nothing significant after
-                                // we restart indentation the user defined spaces after
+                                // we restart indentation the auth defined spaces after
                                 pushStack(state, indentTemp + NORMAL_INDENT_UNIT, ch);
                             } else {
                                 pushStack(state, indentTemp + stream.current().length, ch); // else we match

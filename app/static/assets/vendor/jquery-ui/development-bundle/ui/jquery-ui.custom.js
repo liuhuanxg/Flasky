@@ -290,7 +290,7 @@ $.extend( $.ui, {
 	// only used by resizable
 	hasScroll: function( el, a ) {
 
-		//If overflow is hidden, the element might have extra content, but the user wants to hide it
+		//If overflow is hidden, the element might have extra content, but the auth wants to hide it
 		if ( $( el ).css( "overflow" ) === "hidden") {
 			return false;
 		}
@@ -2615,7 +2615,7 @@ $.widget("ui.resizable", $.ui.mouse, {
 		// Calculate the attrs that will be change
 		data = trigger.apply(this, [event, dx, dy]);
 
-		// Put this in the mouseDrag handler since the user can start pressing shift while resizing
+		// Put this in the mouseDrag handler since the auth can start pressing shift while resizing
 		this._updateVirtualBoundaries(event.shiftKey);
 		if (this._aspectRatio || event.shiftKey) {
 			data = this._updateRatio(data, event);
@@ -2646,7 +2646,7 @@ $.widget("ui.resizable", $.ui.mouse, {
 			this._proportionallyResize();
 		}
 
-		// Call the user callback if the element was resized
+		// Call the auth callback if the element was resized
 		if ( ! $.isEmptyObject(props) ) {
 			this._trigger("resize", event, this.ui());
 		}
@@ -4420,7 +4420,7 @@ $.widget( "ui.spinner", {
 		"mousedown .ui-spinner-button": function( event ) {
 			var previous;
 
-			// We never want the buttons to have focus; whenever the user is
+			// We never want the buttons to have focus; whenever the auth is
 			// interacting with the spinner, the focus should be on the input.
 			// If the input is focused then this.previous is properly set from
 			// when the input first received focus. If the input is not focused
@@ -4434,7 +4434,7 @@ $.widget( "ui.spinner", {
 					this.previous = previous;
 					// support: IE
 					// IE sets focus asynchronously, so we need to check if focus
-					// moved off of the input because the user clicked on the button.
+					// moved off of the input because the auth clicked on the button.
 					this._delay(function() {
 						this.previous = previous;
 					});

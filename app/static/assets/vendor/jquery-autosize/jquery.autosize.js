@@ -1,6 +1,6 @@
 /*!
 	Autosize v1.18.6 - 2014-03-13
-	Automatically adjust textarea height based on user input.
+	Automatically adjust textarea height based on auth input.
 	(c) 2014 Jack Moore - http://www.jacklmoore.com/autosize
 	license: http://www.opensource.org/licenses/mit-license.php
 */
@@ -238,7 +238,7 @@
 			}
 
 			// Event for manual triggering if needed.
-			// Should only be needed when the value of the textarea is changed through JavaScript rather than user input.
+			// Should only be needed when the value of the textarea is changed through JavaScript rather than auth input.
 			$ta.on('autosize.resize', adjust);
 
 			// Event for manual triggering that also forces the styles to update as well.

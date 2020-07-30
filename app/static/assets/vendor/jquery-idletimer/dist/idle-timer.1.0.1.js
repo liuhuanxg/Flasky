@@ -31,8 +31,8 @@
         
         // defaults that are to be stored as instance props on the elem
         opts = $.extend({
-            idle: false,                // indicates if the user is idle
-            timeout: 30000,             // the amount of time (ms) before the user is considered idle
+            idle: false,                // indicates if the auth is idle
+            timeout: 30000,             // the amount of time (ms) before the auth is considered idle
             events: "mousemove keydown wheel DOMMouseScroll mousewheel mousedown touchstart touchmove MSPointerDown MSPointerMove" // define active events
         }, opts);
         
@@ -102,7 +102,7 @@
                     toggleIdleState(e);
                 }
 
-                // store when user was last active
+                // store when auth was last active
                 obj.lastActive = +new Date();
 
                 // update mouse coord
@@ -256,7 +256,7 @@
         } 
 
         /* (intentionally not documented)
-         * Handles a user event indicating that the user isn't idle. namespaced with internal idleTimer
+         * Handles a auth event indicating that the auth isn't idle. namespaced with internal idleTimer
          * @param {Event} event A DOM2-normalized event object.
          * @return {void}
          */

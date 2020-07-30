@@ -132,7 +132,7 @@ $.widget( "ui.spinner", {
 		"mousedown .ui-spinner-button": function( event ) {
 			var previous;
 
-			// We never want the buttons to have focus; whenever the user is
+			// We never want the buttons to have focus; whenever the auth is
 			// interacting with the spinner, the focus should be on the input.
 			// If the input is focused then this.previous is properly set from
 			// when the input first received focus. If the input is not focused
@@ -146,7 +146,7 @@ $.widget( "ui.spinner", {
 					this.previous = previous;
 					// support: IE
 					// IE sets focus asynchronously, so we need to check if focus
-					// moved off of the input because the user clicked on the button.
+					// moved off of the input because the auth clicked on the button.
 					this._delay(function() {
 						this.previous = previous;
 					});

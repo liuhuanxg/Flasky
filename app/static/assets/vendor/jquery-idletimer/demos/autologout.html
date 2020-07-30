@@ -138,7 +138,7 @@
 
 
             $(document).on("idle.idleTimer", function (event, elem, obj) {
-                //Get time when user was last active
+                //Get time when auth was last active
                 var
                     diff = (+new Date()) - obj.lastActive - obj.timeout,
                     warning = (+new Date()) - diff

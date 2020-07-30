@@ -90,7 +90,7 @@
 		},
 
 		onTimeout: function() {
-			self.location.href = 'pages-signin.html';
+			self.location.href = 'login.html';
 		}
 
 	};

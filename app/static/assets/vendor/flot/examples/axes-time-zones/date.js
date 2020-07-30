@@ -1,5 +1,5 @@
 // -----
-// The `timezoneJS.Date` object gives you full-blown timezone support, independent from the timezone set on the end-user's machine running the browser. It uses the Olson zoneinfo files for its timezone data.
+// The `timezoneJS.Date` object gives you full-blown timezone support, independent from the timezone set on the end-auth's machine running the browser. It uses the Olson zoneinfo files for its timezone data.
 //
 // The constructor function and setter methods use proxy JavaScript Date objects behind the scenes, so you can use strings like '10/22/2006' with the constructor. You also get the same sensible wraparound behavior with numeric parameters (like setting a value of 14 for the month wraps around to the next March).
 //
@@ -226,7 +226,7 @@
     getUTCMinutes: function () { return this.getUTCDateProxy().getUTCMinutes(); },
     getUTCMonth: function () { return this.getUTCDateProxy().getUTCMonth(); },
     getUTCSeconds: function () { return this.getUTCDateProxy().getUTCSeconds(); },
-    // Time adjusted to user-specified timezone
+    // Time adjusted to auth-specified timezone
     getTime: function () {
       return this._timeProxy + (this.getTimezoneOffset() * 60 * 1000);
     },

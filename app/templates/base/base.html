@@ -4,8 +4,13 @@
 
 		<!-- Basic -->
 		<meta charset="UTF-8">
+        {% block title %}
+            <title>Blank Page | 个人博客</title>
+        {% endblock %}
 
-		<title>Blank Page | Okler Themes | Porto-Admin</title>
+        <link rel="shortcut icon" href="/static/favicon.ico" />
+        <link rel="bookmark" href="/static/favicon.ico" />
+
 		<meta name="keywords" content="HTML5 Admin Template" />
 		<meta name="description" content="Porto Admin - Responsive HTML5 Template">
 		<meta name="author" content="okler.net">
@@ -13,26 +18,25 @@
 		<!-- Mobile Metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-		<!-- Web Fonts  -->
+    {% block style %}
+         <!-- Web Fonts  -->
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
-
 		<!-- Vendor CSS -->
-		<link rel="stylesheet" href="../../static/assets/vendor/bootstrap/css/bootstrap.css" />
-		<link rel="stylesheet" href="../../static/assets/vendor/font-awesome/css/font-awesome.css" />
-		<link rel="stylesheet" href="../../static/assets/vendor/magnific-popup/magnific-popup.css" />
-		<link rel="stylesheet" href="../../static/assets/vendor/bootstrap-datepicker/css/datepicker3.css" />
-
+		<link rel="stylesheet" href="/static/assets/vendor/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="/static/assets/vendor/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="/static/assets/vendor/magnific-popup/magnific-popup.css" />
+		<link rel="stylesheet" href="/static/assets/vendor/bootstrap-datepicker/css/datepicker3.css" />
 		<!-- Theme CSS -->
-		<link rel="stylesheet" href="../../static/assets/stylesheets/theme.css" />
-
+		<link rel="stylesheet" href="/static/assets/stylesheets/theme.css" />
 		<!-- Skin CSS -->
-		<link rel="stylesheet" href="../../static/assets/stylesheets/skins/default.css" />
-
+		<link rel="stylesheet" href="/static/assets/stylesheets/skins/default.css" />
 		<!-- Theme Custom CSS -->
-		<link rel="stylesheet" href="../../static/assets/stylesheets/theme-custom.css">
-
+		<link rel="stylesheet" href="/static/assets/stylesheets/theme-custom.css">
 		<!-- Head Libs -->
-		<script src="../../static/assets/vendor/modernizr/modernizr.js"></script>
+		<script src="/static/assets/vendor/modernizr/modernizr.js"></script>
+    {% endblock %}
+
+
 
 	</head>
 	<body>
@@ -42,14 +46,14 @@
 			<header class="header">
 				<div class="logo-container">
 					<a href="../" class="logo">
-						<img src="../../static/assets/images/logo.png" height="35px" alt="Porto Admin" />
+						<img src="/static/assets/images/logo.png" height="35px" alt="Porto Admin" />
 					</a>
 					<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
 						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
 					</div>
 				</div>
 			
-				<!-- start: search & user box -->
+				<!-- start: search & auth box -->
 				<div class="header-right">
 			
 					<form action="pages-search-results.html" class="search nav-form">
@@ -128,7 +132,7 @@
 										<li>
 											<a href="#" class="clearfix">
 												<figure class="image">
-													<img src="../../static/assets/images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle" />
+													<img src="/static/assets/images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle" />
 												</figure>
 												<span class="title">Joseph Doe</span>
 												<span class="message">Lorem ipsum dolor sit.</span>
@@ -137,7 +141,7 @@
 										<li>
 											<a href="#" class="clearfix">
 												<figure class="image">
-													<img src="../../static/assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle" />
+													<img src="/static/assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle" />
 												</figure>
 												<span class="title">Joseph Junior</span>
 												<span class="message truncate">Truncated message. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacinia orci. Proin vestibulum eget risus non luctus. Nunc cursus lacinia lacinia. Nulla molestie malesuada est ac tincidunt. Quisque eget convallis diam, nec venenatis risus. Vestibulum blandit faucibus est et malesuada. Sed interdum cursus dui nec venenatis. Pellentesque non nisi lobortis, rutrum eros ut, convallis nisi. Sed tellus turpis, dignissim sit amet tristique quis, pretium id est. Sed aliquam diam diam, sit amet faucibus tellus ultricies eu. Aliquam lacinia nibh a metus bibendum, eu commodo eros commodo. Sed commodo molestie elit, a molestie lacus porttitor id. Donec facilisis varius sapien, ac fringilla velit porttitor et. Nam tincidunt gravida dui, sed pharetra odio pharetra nec. Duis consectetur venenatis pharetra. Vestibulum egestas nisi quis elementum elementum.</span>
@@ -146,7 +150,7 @@
 										<li>
 											<a href="#" class="clearfix">
 												<figure class="image">
-													<img src="../../static/assets/images/!sample-user.jpg" alt="Joe Junior" class="img-circle" />
+													<img src="/static/assets/images/!sample-user.jpg" alt="Joe Junior" class="img-circle" />
 												</figure>
 												<span class="title">Joe Junior</span>
 												<span class="message">Lorem ipsum dolor sit.</span>
@@ -155,7 +159,7 @@
 										<li>
 											<a href="#" class="clearfix">
 												<figure class="image">
-													<img src="../../static/assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle" />
+													<img src="/static/assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle" />
 												</figure>
 												<span class="title">Joseph Junior</span>
 												<span class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacinia orci. Proin vestibulum eget risus non luctus. Nunc cursus lacinia lacinia. Nulla molestie malesuada est ac tincidunt. Quisque eget convallis diam.</span>
@@ -229,7 +233,7 @@
 					<div id="userbox" class="userbox">
 						<a href="#" data-toggle="dropdown">
 							<figure class="profile-picture">
-								<img src="../../static/assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
+								<img src="/static/assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
 							</figure>
 							<div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
 								<span class="name">John Doe Junior</span>
@@ -255,7 +259,7 @@
 						</div>
 					</div>
 				</div>
-				<!-- end: search & user box -->
+				<!-- end: search & auth box -->
 			</header>
 			<!-- end: header -->
 
@@ -735,24 +739,22 @@
 						</div>
 					</header>
 
-					<!-- start: page -->
-					<!-- end: page -->
+					{% block content %}
+
+					{% endblock %}
+                    更多信息请联系： <a href="#" target="_blank" title="柚子">柚子</a> - Collect from <a href="#" title="更多信息" target="_blank">更多信息</a>
 				</section>
 			</div>
-
 			<aside id="sidebar-right" class="sidebar-right">
 				<div class="nano">
 					<div class="nano-content">
 						<a href="#" class="mobile-close visible-xs">
 							Collapse <i class="fa fa-chevron-right"></i>
 						</a>
-			
 						<div class="sidebar-right-wrapper">
-			
 							<div class="sidebar-widget widget-calendar">
 								<h6>Upcoming Tasks</h6>
 								<div data-plugin-datepicker data-plugin-skin="dark" ></div>
-			
 								<ul>
 									<li>
 										<time datetime="2014-04-19T00:00+00:00">04/19/2014</time>
@@ -760,13 +762,12 @@
 									</li>
 								</ul>
 							</div>
-			
 							<div class="sidebar-widget widget-friends">
 								<h6>Friends</h6>
 								<ul>
 									<li class="status-online">
 										<figure class="profile-picture">
-											<img src="../../static/assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+											<img src="/static/assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
 										</figure>
 										<div class="profile-info">
 											<span class="name">Joseph Doe Junior</span>
@@ -775,7 +776,7 @@
 									</li>
 									<li class="status-online">
 										<figure class="profile-picture">
-											<img src="../../static/assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+											<img src="/static/assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
 										</figure>
 										<div class="profile-info">
 											<span class="name">Joseph Doe Junior</span>
@@ -784,7 +785,7 @@
 									</li>
 									<li class="status-offline">
 										<figure class="profile-picture">
-											<img src="../../static/assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+											<img src="/static/assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
 										</figure>
 										<div class="profile-info">
 											<span class="name">Joseph Doe Junior</span>
@@ -793,7 +794,7 @@
 									</li>
 									<li class="status-offline">
 										<figure class="profile-picture">
-											<img src="../../static/assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+											<img src="/static/assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
 										</figure>
 										<div class="profile-info">
 											<span class="name">Joseph Doe Junior</span>
@@ -802,30 +803,27 @@
 									</li>
 								</ul>
 							</div>
-			
 						</div>
 					</div>
 				</div>
 			</aside>
 		</section>
 
-		<!-- Vendor -->
-		<script src="../../static/assets/vendor/jquery/jquery.js"></script>
-		<script src="../../static/assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
-		<script src="../../static/assets/vendor/bootstrap/js/bootstrap.js"></script>
-		<script src="../../static/assets/vendor/nanoscroller/nanoscroller.js"></script>
-		<script src="../../static/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-		<script src="../../static/assets/vendor/magnific-popup/magnific-popup.js"></script>
-		<script src="../../static/assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
-		
+    {% block script %}
+        <!-- Vendor -->
+		<script src="/static/assets/vendor/jquery/jquery.js"></script>
+		<script src="/static/assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+		<script src="/static/assets/vendor/bootstrap/js/bootstrap.js"></script>
+		<script src="/static/assets/vendor/nanoscroller/nanoscroller.js"></script>
+		<script src="/static/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+		<script src="/static/assets/vendor/magnific-popup/magnific-popup.js"></script>
+		<script src="/static/assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
 		<!-- Theme Base, Components and Settings -->
-		<script src="../../static/assets/javascripts/theme.js"></script>
-		
+		<script src="/static/assets/javascripts/theme.js"></script>
 		<!-- Theme Custom -->
-		<script src="../../static/assets/javascripts/theme.custom.js"></script>
-		
+		<script src="/static/assets/javascripts/theme.custom.js"></script>
 		<!-- Theme Initialization Files -->
-		<script src="../../static/assets/javascripts/theme.init.js"></script>
-
+		<script src="/static/assets/javascripts/theme.init.js"></script>
+    {% endblock %}
 	</body>
 </html>

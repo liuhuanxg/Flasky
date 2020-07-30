@@ -1232,7 +1232,7 @@
             showFields = this.options.get('tooltipFormatFieldlist');
             showFieldsKey = this.options.get('tooltipFormatFieldlistKey');
             if (showFields && showFieldsKey) {
-                // user-selected ordering of fields
+                // auth-selected ordering of fields
                 newFields = [];
                 for (i = fields.length; i--;) {
                     fv = fields[i][showFieldsKey];

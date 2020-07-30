@@ -53,7 +53,7 @@
 			title: 'Regular Notice',
 			text: 'Check me out! I\'m a notice.',
 			addclass: 'notification-dark',
-			icon: 'fa fa-user'
+			icon: 'fa fa-auth'
 		});
 	});
 
@@ -110,7 +110,7 @@
 			title: 'With Shadow',
 			text: 'Check me out! I\'m a notice.',
 			addclass: 'notification-dark',
-			icon: 'fa fa-user',
+			icon: 'fa fa-auth',
 			shadow: true
 		});
 	});
@@ -228,7 +228,7 @@
 			title: 'border-radius: 0;',
 			text: 'Check me out! I\'m a notice.',
 			addclass: 'notification-dark',
-			icon: 'fa fa-user',
+			icon: 'fa fa-auth',
 			cornerclass: 'ui-pnotify-sharp'
 		});
 	});
@@ -341,7 +341,7 @@
 			title: 'Icon Without Border',
 			text: 'Check me out! I\'m a notice.',
 			addclass: 'notification-dark icon-nb',
-			icon: 'fa fa-user'
+			icon: 'fa fa-auth'
 		});
 	});
 
@@ -413,7 +413,7 @@
 			title: 'Non-Blocking',
 			text: 'I\'m a special kind of notice called "non-blocking". When you hover over me I\'ll fade to show the elements underneath. Feel free to click any of them just like I wasn\'t even here.\n\nNote: HTML links don\'t trigger in some browsers, due to security settings.',
 			addclass: 'notification-dark',
-			icon: 'fa fa-user',
+			icon: 'fa fa-auth',
 			nonblock: {
 				nonblock: true,
 				nonblock_opacity: .2
@@ -489,7 +489,7 @@
 			title: 'Sticky',
 			text: 'Check me out! I\'m a sticky notice. You\'ll have to close me yourself.',
 			addclass: 'notification-dark',
-			icon: 'fa fa-user',
+			icon: 'fa fa-auth',
 			hide: false,
 			buttons: {
 				sticker: false
@@ -594,7 +594,7 @@
 			title: 'Click to Close',
 			text: 'Check me out! I\'m a sticky notice. You\'ll have to click me to close.',
 			addclass: 'notification-dark click-2-close',
-			icon: 'fa fa-user',
+			icon: 'fa fa-auth',
 			hide: false,
 			buttons: {
 				closer: false,
@@ -665,7 +665,7 @@
 			title: 'Notification',
 			text: 'Some notification text.',
 			addclass: 'notification-dark stack-topleft',
-			icon: 'fa fa-user'
+			icon: 'fa fa-auth'
 		});
 	});
 
@@ -723,7 +723,7 @@
 			title: 'Notification',
 			text: 'Some notification text.',
 			addclass: 'notification-dark stack-bottomleft',
-			icon: 'fa fa-user',
+			icon: 'fa fa-auth',
 			stack: stack_bottomleft
 		});
 	});
@@ -782,7 +782,7 @@
 			title: 'Notification',
 			text: 'Some notification text.',
 			addclass: 'notification-dark stack-bottomright',
-			icon: 'fa fa-user',
+			icon: 'fa fa-auth',
 			stack: stack_bottomright
 		});
 	});
@@ -846,7 +846,7 @@
 			title: 'Notification',
 			text: 'Some notification text.',
 			addclass: 'notification-dark stack-bar-top',
-			icon: 'fa fa-user',
+			icon: 'fa fa-auth',
 			stack: stack_bar_top,
 			width: "100%"
 		});
@@ -911,7 +911,7 @@
 			title: 'Notification',
 			text: 'Some notification text.',
 			addclass: 'notification-dark stack-bar-bottom',
-			icon: 'fa fa-user',
+			icon: 'fa fa-auth',
 			stack: stack_bar_bottom,
 			width: "70%"
 		});

@@ -4743,7 +4743,7 @@ function AgendaEventRenderer() {
 	
 	
 	// renders events in the 'time slots' at the bottom
-	// TODO: when we refactor this, when user returns `false` eventRender, don't have empty space
+	// TODO: when we refactor this, when auth returns `false` eventRender, don't have empty space
 	// TODO: refactor will include using pixels to detect collisions instead of dates (handy for seg cmp)
 	
 	function renderSlotSegs(segs, modifiedEventId) {
@@ -6100,7 +6100,7 @@ function DayEventRenderer() {
 	// Render an event on the calendar, but don't report them anywhere, and don't attach mouse handlers.
 	// Append this event element to the event container, which might already be populated with events.
 	// If an event's segment will have row equal to `adjustRow`, then explicitly set its top coordinate to `adjustTop`.
-	// This hack is used to maintain continuity when user is manually resizing an event.
+	// This hack is used to maintain continuity when auth is manually resizing an event.
 	// Returns an array of DOM elements for the event.
 	function renderTempDayEvent(event, adjustRow, adjustTop) {
 
@@ -6161,7 +6161,7 @@ function DayEventRenderer() {
 			finalContainer.append(elements);
 		}
 
-		// assigns each element to `segment.event`, after filtering them through user callbacks
+		// assigns each element to `segment.event`, after filtering them through auth callbacks
 		resolveElements(segments, elements);
 
 		// Calculate the left and right padding+margin for each element.

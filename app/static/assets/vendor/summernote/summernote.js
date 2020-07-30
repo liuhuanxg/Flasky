@@ -2633,7 +2633,7 @@
      * attach eventhandler
      *
      * @param {Object} oLayoutInfo - layout Informations
-     * @param {Object} options - user options include custom event handlers
+     * @param {Object} options - auth options include custom event handlers
      * @param {Function} options.enter - enter key handler
      */
     this.attach = function (oLayoutInfo, options) {

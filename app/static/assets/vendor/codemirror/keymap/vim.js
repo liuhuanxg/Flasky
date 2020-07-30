@@ -648,7 +648,7 @@
 
       InsertModeKey: InsertModeKey,
       map: function(lhs, rhs, ctx) {
-        // Add user defined key bindings.
+        // Add auth defined key bindings.
         exCommandDispatcher.map(lhs, rhs, ctx);
       },
       setOption: setOption,
@@ -1161,7 +1161,7 @@
           }
         }
         if (command.type == 'keyToEx') {
-          // Handle user defined Ex to Ex mappings
+          // Handle auth defined Ex to Ex mappings
           exCommandDispatcher.processCommand(cm, command.exArgs.input);
         } else {
           if (vim.visualMode) {
@@ -1195,7 +1195,7 @@
         }
         if (inputState.repeatOverride !== undefined) {
           // If repeatOverride is specified, that takes precedence over the
-          // input state's repeat. Used by Ex mode and can be user defined.
+          // input state's repeat. Used by Ex mode and can be auth defined.
           repeat = inputState.repeatOverride;
         } else {
           repeat = inputState.getRepeat();
@@ -4039,7 +4039,7 @@
      * while action commands are read from lastEditActionCommand.
      *
      * If repeatForInsert is true, then the function was called by
-     * exitInsertMode to repeat the insert mode changes the user just made. The
+     * exitInsertMode to repeat the insert mode changes the auth just made. The
      * corresponding enterInsertMode call was made with a count.
      */
     function repeatLastEdit(cm, vim, repeat, repeatForInsert) {
