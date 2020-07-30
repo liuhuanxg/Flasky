@@ -24,6 +24,12 @@ def make_shell_context():
     """"""
     return dict(app=app, db=db, User=User, Role=Role)
 
+# 启动测试文件
+@manager.command
+def test():
+    import unittest
+    tests = unittest.TestLoader().discover("app/tests")
+    unittest.TextTestRunner(verbosity=2).run(tests)
 
 manager.add_command("shell", Shell(make_context=make_shell_context))
 manager.add_command("db", MigrateCommand)
