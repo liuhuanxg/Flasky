@@ -16,12 +16,8 @@ class BaseModel(db.Model):
     id = db.Column(db.Integer, primary_key=True)
 
     def save(self):
-        if hasattr(self,"password_hash"):
-            new_password_hash  = self.__getattribute__("password_hash")
-            self.password_hash = set_pwd(new_password_hash)
         db.session.add(self)
         db.session.commit()
-
 
 
 # 用户角色类
@@ -40,11 +36,11 @@ class User(BaseModel):
     __tablename__ = "users"
 
     username = db.Column(db.String(64), unique=True, index=True)
-    email =  db.Column(db.String(32), unique=True, index=True)
+    email = db.Column(db.String(32), unique=True, index=True)
     role_id = db.Column(db.Integer, db.ForeignKey("roles.id"))
-    password_hash =  db.Column(db.String(128))
+    password_hash = db.Column(db.String(128))
 
-    def __init__(self,username,email,password_hash):
+    def __init__(self, username, email, password_hash):
         self.username = username
         self.email = email
         self.password_hash = set_pwd(password_hash)

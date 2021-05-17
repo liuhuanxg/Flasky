@@ -8,16 +8,19 @@
 
 from datetime import datetime
 from flask import render_template, session, redirect, url_for
-
+from utils.user_utils import login_valid
 from . import main
 from .forms import NameForm
-from .. import db
+from app import db
 from ..models import User
 
 @main.route("/base")
 def base():
     return render_template("base/blank.html")
 
-@main.route("/", methods=["GET", "POST"])
+
+@main.route("/index", methods=["GET", "POST"])
+# @login_valid
 def index():
+    print(session,1111111)
     return render_template("index.html", current_time=datetime.utcnow())

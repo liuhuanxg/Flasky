@@ -7,7 +7,7 @@
 """
 
 import os
-
+import redis
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 
@@ -24,16 +24,22 @@ class Config():
 
 
 class DevelopmentConfig(Config):
+    """开发模式配置"""
     DEBUG = True
+    # 邮箱设置
     MAIL_SERVER = 'smtp.googlemail.com'
-
     MAIL_PORT = 587
     MAIL_USE_TLS = True
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
                               'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
 
+    # redis设置
+    redis_db0 = redis.Redis(host='localhost', port=6379,db=0, password=None, socket_timeout=None)
+
+    # mongo设置
 
 class TestingConfig(Config):
     TESTING = True
